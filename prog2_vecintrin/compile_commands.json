@@ -1,0 +1,44 @@
+[
+  {
+    "file": "logger.cpp",
+    "arguments": [
+      "/opt/homebrew/bin/g++-15",
+      "-I../common",
+      "-O3",
+      "-std=c++11",
+      "-Wall",
+      "-fPIC",
+      "-c",
+      "logger.cpp"
+    ],
+    "directory": "/Users/qianjindexiaozu/projects/CS149/Stanford-CS149-asst1/prog2_vecintrin"
+  },
+  {
+    "file": "CS149intrin.cpp",
+    "arguments": [
+      "/opt/homebrew/bin/g++-15",
+      "-I../common",
+      "-O3",
+      "-std=c++11",
+      "-Wall",
+      "-fPIC",
+      "-c",
+      "CS149intrin.cpp"
+    ],
+    "directory": "/Users/qianjindexiaozu/projects/CS149/Stanford-CS149-asst1/prog2_vecintrin"
+  },
+  {
+    "file": "main.cpp",
+    "arguments": [
+      "/opt/homebrew/bin/g++-15",
+      "-I../common",
+      "-O3",
+      "-std=c++11",
+      "-Wall",
+      "-fPIC",
+      "-c",
+      "main.cpp"
+    ],
+    "directory": "/Users/qianjindexiaozu/projects/CS149/Stanford-CS149-asst1/prog2_vecintrin"
+  }
+]

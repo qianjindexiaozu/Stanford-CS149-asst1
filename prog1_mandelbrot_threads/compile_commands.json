@@ -1,0 +1,38 @@
+[
+  {
+    "file": "main.cpp",
+    "arguments": [
+      "/opt/homebrew/bin/g++-15",
+      "main.cpp",
+      "-I../common",
+      "-Iobjs/",
+      "-O3",
+      "-std=c++11",
+      "-Wall",
+      "-fPIC",
+      "-c",
+      "-o",
+      "objs/main.o"
+    ],
+    "directory": "/Users/qianjindexiaozu/projects/CS149/Stanford-CS149-asst1/prog1_mandelbrot_threads",
+    "output": "objs/main.o"
+  },
+  {
+    "file": "mandelbrotThread.cpp",
+    "arguments": [
+      "/opt/homebrew/bin/g++-15",
+      "mandelbrotThread.cpp",
+      "-I../common",
+      "-Iobjs/",
+      "-O3",
+      "-std=c++11",
+      "-Wall",
+      "-fPIC",
+      "-c",
+      "-o",
+      "objs/mandelbrotThread.o"
+    ],
+    "directory": "/Users/qianjindexiaozu/projects/CS149/Stanford-CS149-asst1/prog1_mandelbrot_threads",
+    "output": "objs/mandelbrotThread.o"
+  }
+]
