@@ -2,7 +2,9 @@
 #include "CycleTimer.h"
 #include "logger.h"
 #include <algorithm>
+#include <cstddef>
 #include <cstdio>
+#include <cstdlib>
 #include <getopt.h>
 #include <math.h>
 #include <stdio.h>
@@ -326,8 +328,40 @@ float arraySumVector(float *values, int N) {
   // here
   //
 
+  __cs149_vec_float result = _cs149_vset_float(0.f);
+  float sum = 0.f;
+
   for (int i = 0; i < N; i += VECTOR_WIDTH) {
+    int step = i + VECTOR_WIDTH > N ? N - i : VECTOR_WIDTH;
+    __cs149_mask mask = _cs149_init_ones(step);
+    __cs149_vec_float temp;
+    _cs149_vload_float(temp, values + i, mask);
+    _cs149_vadd_float(result, result, temp, mask);
   }
 
-  return 0.0;
+  // __cs149_mask mask = _cs149_init_ones();
+  //
+  // float res[VECTOR_WIDTH] = {0.f};
+  // _cs149_vstore_float(res, result, mask);
+  //
+  //
+  // for (int i = 0; i < VECTOR_WIDTH; i++) {
+  //   sum += res[i];
+  // }
+
+  int width = VECTOR_WIDTH;
+  __cs149_vec_float temp = _cs149_vset_float(0.f);
+
+  while (width != 1) {
+    _cs149_interleave_float(temp, result);
+    _cs149_hadd_float(temp, temp);
+    __cs149_mask mask = _cs149_init_ones(width);
+    _cs149_vmove_float(result, temp, mask);
+    width /= 2;
+  }
+
+  __cs149_mask mask = _cs149_init_ones(1);
+  _cs149_vstore_float(&sum, result, mask);
+
+  return sum;
 }
