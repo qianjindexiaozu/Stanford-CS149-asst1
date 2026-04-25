@@ -1,0 +1,70 @@
+[
+  {
+    "file": "main.cpp",
+    "arguments": [
+      "/usr/bin/g++",
+      "-march=native",
+      "main.cpp",
+      "-I../common",
+      "-Iobjs/",
+      "-O3",
+      "-Wall",
+      "-c",
+      "-o",
+      "objs/main.o"
+    ],
+    "directory": "/Users/qianjindexiaozu/projects/CS149/Stanford-CS149-asst1/prog4_sqrt",
+    "output": "objs/main.o"
+  },
+  {
+    "file": "sqrtSerial.cpp",
+    "arguments": [
+      "/usr/bin/g++",
+      "-march=native",
+      "sqrtSerial.cpp",
+      "-I../common",
+      "-Iobjs/",
+      "-O3",
+      "-Wall",
+      "-c",
+      "-o",
+      "objs/sqrtSerial.o"
+    ],
+    "directory": "/Users/qianjindexiaozu/projects/CS149/Stanford-CS149-asst1/prog4_sqrt",
+    "output": "objs/sqrtSerial.o"
+  },
+  {
+    "file": "../common/ppm.cpp",
+    "arguments": [
+      "/usr/bin/g++",
+      "-march=native",
+      "../common/ppm.cpp",
+      "-I../common",
+      "-Iobjs/",
+      "-O3",
+      "-Wall",
+      "-c",
+      "-o",
+      "objs/ppm.o"
+    ],
+    "directory": "/Users/qianjindexiaozu/projects/CS149/Stanford-CS149-asst1/prog4_sqrt",
+    "output": "objs/ppm.o"
+  },
+  {
+    "file": "../common/tasksys.cpp",
+    "arguments": [
+      "/usr/bin/g++",
+      "-march=native",
+      "../common/tasksys.cpp",
+      "-I../common",
+      "-Iobjs/",
+      "-O3",
+      "-Wall",
+      "-c",
+      "-o",
+      "objs/tasksys.o"
+    ],
+    "directory": "/Users/qianjindexiaozu/projects/CS149/Stanford-CS149-asst1/prog4_sqrt",
+    "output": "objs/tasksys.o"
+  }
+]
